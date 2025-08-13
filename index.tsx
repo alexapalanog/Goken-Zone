@@ -26,12 +26,18 @@ const AvatarIcon = () => `
 
 const avatarSVGs = {
     Aria: AvatarIcon(),
-    Luna: `<svg viewBox="0 0 48 48"><defs><linearGradient id="luna-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbcfe8"/><stop offset="100%" stop-color="#fce7f3"/></linearGradient><filter id="luna-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#luna-glow)"><circle cx="24" cy="24" r="20" fill="url(#luna-grad)"/><path d="M24 12 c-5.52 0-10 4.48-10 10 0 1.81.48 3.5 1.34 5-3.12 1.5-5.34 4.79-5.34 8.5h28c0-3.71-2.22-7-5.34-8.5.86-1.5 1.34-3.19 1.34-5 0-5.52-4.48-10-10-10z" fill="#f472b6"/><circle cx="18" cy="24" r="2.5" fill="#fff"/><circle cx="30" cy="24" r="2.5" fill="#fff"/><path d="M21 31 s2 2 6 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg>`,
-    Leo: `<svg viewBox="0 0 48 48"><defs><linearGradient id="leo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs><circle cx="24" cy="24" r="22" fill="#e0f2fe"/><path fill="url(#leo-grad)" d="M24 6 C14.06 6 6 14.06 6 24 s8.06 18 18 18 18-8.06 18-18 S33.94 6 24 6z M24 12.5 c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z M32 32 H16 c-1.1 0-2-0.9-2-2 s0.9-2 2-2 h16 c1.1 0 2 0.9 2 2s-0.9 2-2 2z"/></svg>`,
-    Mia: `<svg viewBox="0 0 48 48"><defs><linearGradient id="mia-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d8b4fe"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs><rect x="4" y="4" width="40" height="40" rx="24" fill="url(#mia-grad)"/><path d="M18 18h12v12H18z" fill="#f3e8ff" transform="rotate(45 24 24)"/><circle cx="18" cy="21" r="2.5" fill="white"/><circle cx="30" cy="21" r="2.5" fill="white"/><path d="M20 29 q4-4 8 0" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`,
-    Zane: `<svg viewBox="0 0 48 48"><defs><linearGradient id="zane-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#10b981"/></linearGradient></defs><path d="M24 2 L46 24 L24 46 L2 24 Z" fill="url(#zane-grad)"/><rect x="18" y="18" width="12" height="6" fill="#a7f3d0"/><rect x="18" y="28" width="12" height="2" fill="#a7f3d0"/></svg>`,
-    Kai: `<svg viewBox="0 0 48 48"><defs><linearGradient id="kai-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><g transform="translate(4,4)"><path d="M20 0 C31.046 0 40 8.954 40 20 C40 31.046 31.046 40 20 40 C8.954 40 0 31.046 0 20 C0 8.954 8.954 0 20 0 Z" fill="#fef3c7"/><path d="M20 8 C14.477 8 10 12.477 10 18 L16 18 C16 15.791 17.791 14 20 14 C22.209 14 24 15.791 24 18 L30 18 C30 12.477 25.523 8 20 8Z" fill="url(#kai-grad)"/><circle cx="15" cy="26" r="3" fill="url(#kai-grad)"/><circle cx="25" cy="26" r="3" fill="url(#kai-grad)"/></g></svg>`,
+    Luna: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="luna-grad" x1="0.5" x2="0.5" y2="1"><stop offset="0" stop-color="#fbcfe8"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient></defs><g><path fill="url(#luna-grad)" d="M24,4C12.95,4,4,12.95,4,24s8.95,20,20,20,20-8.95,20-20S35.05,4,24,4Z"/><path fill="#fff" d="M32.5,26.5c0,4.69-3.81,8.5-8.5,8.5s-8.5-3.81-8.5-8.5,3.81-8.5,8.5-8.5,8.5,3.81,8.5,8.5Z"/><path fill="#111827" d="M19,25.5a1.5,1.5,0,1,1-3,0,1.5,1.5,0,0,1,3,0Z"/><path fill="#111827" d="M32,25.5a1.5,1.5,0,1,1-3,0,1.5,1.5,0,0,1,3,0Z"/><path fill="none" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21,30.5s1,1,3,1,3-1,3-1"/><path fill="#fff" d="M21.5,15.5c0,1.38-2.02,2.5-4.5,2.5s-4.5-1.12-4.5-2.5S14.52,13,17,13,21.5,14.12,21.5,15.5Z" transform="translate(14.5 0)"/><path fill="#fff" d="M21.5,15.5c0,1.38-2.02,2.5-4.5,2.5s-4.5-1.12-4.5-2.5S14.52,13,17,13,21.5,14.12,21.5,15.5Z" transform="translate(0 0)"/></g></svg>`,
+    Leo: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="leo-grad" x1="0.5" x2="0.5" y2="1"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient></defs><path fill="url(#leo-grad)" d="M44,24c0,11.05-8.95,20-20,20S4,35.05,4,24,12.95,4,24,4,44,12.95,44,24Z"/><path fill="#fff" d="M36,24c0,6.63-5.37,12-12,12s-12-5.37-12-12,5.37-12,12-12,12,5.37,12,12Z"/><path fill="#f97316" d="M20,24a1,1,0,1,1-2,0,1,1,0,0,1,2,0Z"/><path fill="#f97316" d="M30,24a1,1,0,1,1-2,0,1,1,0,0,1,2,0Z"/><path fill="none" stroke="#f97316" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21,31h6"/><path d="M11,18.5c0-1.87,1.21-3.5,3-3.5s3,1.63,3,3.5-1.21,3.5-3,3.5-3-1.63-3-3.5Z" transform="translate(20 0)" fill="#fbbf24"/><path d="M11,18.5c0-1.87,1.21-3.5,3-3.5s3,1.63,3,3.5-1.21,3.5-3,3.5-3-1.63-3-3.5Z" fill="#fbbf24"/></svg>`,
+    Mia: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g><path d="M42.5,22.29C42.5,12.2,34.3,4,24.21,4S5.91,12.2,5.91,22.29c0,7.24,4.29,13.5,10.37,16.29,1.17.54,1.88,1.72,1.88,2.95V44h3.69c.81,0,1.55-.4,2.05-1.09l4.31-6c.4-.55.99-.87,1.62-.87H32.14c6.07-2.79,10.36-9.05,10.36-16.29Z" fill="#a78bfa"/><path d="M13.6,12.82c3.48-2.09,7.63-3.29,12-3.29s8.52,1.2,12,3.29c3.1,1.86,5.65,4.68,7.31,8.12.55,1.14.8,2.37.8,3.64,0,7.31-4.23,13.6-10.15,16.4-.33.15-.55.49-.55.87v2.24l-3.3-4.57c-.42-.58-1.05-.93-1.74-.93h-1.73c-.69,0-1.32.35-1.74.93l-3.3,4.57v-2.24c0-.38-.22-.72-.55-.87-5.92-2.8-10.15-9.09-10.15-16.4,0-1.27.25-2.5.8-3.64,1.66-3.44,4.22-6.26,7.31-8.12Z" fill="#c4b5fd"/><path d="M18.14,24.21a1.5,1.5,0,1,1-3,0,1.5,1.5,0,0,1,3,0Z" fill="#4c1d95"/><path d="M32.86,24.21a1.5,1.5,0,1,1-3,0,1.5,1.5,0,0,1,3,0Z" fill="#4c1d95"/><path d="M22.5,29.83s1,1.62,3,1.62,3-1.62,3-1.62" fill="none" stroke="#4c1d95" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>`,
+    Zane: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="zane-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6ee7b7"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs><rect width="40" height="40" x="4" y="4" fill="url(#zane-grad)" rx="8"/><rect width="28" height="12" x="10" y="12" fill="#fff" rx="2"/><rect width="8" height="4" x="14" y="16" fill="#0f766e" rx="1"/><rect width="8" height="4" x="26" y="16" fill="#0f766e" rx="1"/><rect width="20" height="4" x="14" y="28" fill="#115e59" rx="2"/></svg>`,
+    Kai: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="kai-grad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fefce8"/><stop offset="100%" stop-color="#fef08a"/></radialGradient></defs><path fill="url(#kai-grad)" d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4z"/><path fill="#ca8a04" d="M17.5 29a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm16 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="#ca8a04" d="M19 35s2 2 5 2 5-2 5-2" fill="none"/><g fill="#fde047"><path d="M19.1 12.56C19.83 11.23 21.8 10 24 10s4.17 1.23 4.9 2.56c.33.59-.06 1.34-.73 1.34H19.83c-.67 0-1.06-.75-.73-1.34z"/><path d="M12.1 19.56C12.83 18.23 14.8 17 17 17s4.17 1.23 4.9 2.56c.33.59-.06 1.34-.73 1.34H12.83c-.67 0-1.06-.75-.73-1.34z" transform="translate(14 0)"/><path d="M12.1 19.56C12.83 18.23 14.8 17 17 17s4.17 1.23 4.9 2.56c.33.59-.06 1.34-.73 1.34H12.83c-.67 0-1.06-.75-.73-1.34z"/></g></svg>`,
     Nia: `<svg viewBox="0 0 48 48"><defs><linearGradient id="nia-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#be123c"/></linearGradient></defs><circle cx="24" cy="24" r="22" fill="#ffe4e6"/><path fill="url(#nia-grad)" d="M12 24 C12 17.373 17.373 12 24 12 C30.627 12 36 17.373 36 24 C36 27.098 34.697 29.89 32.66 31.85 C30.73 34.85 27.58 37 24 37 C20.42 37 17.27 34.85 15.34 31.85 C13.303 29.89 12 27.098 12 24 Z"/><path d="M19 22 l-4 4 l4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M29 22 l4 4 l-4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`,
+};
+
+const communityAvatarSVGs = {
+    'CyberNinja': `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1a1a1a" d="M24,4C12.95,4,4,12.95,4,24s8.95,20,20,20s20-8.95,20-20S35.05,4,24,4z"/><path fill="#0ff" d="M14,28h20v2H14z"/><path fill="#f0f" d="M18,22h12v4H18z" opacity="0.8"/><path fill="#0ff" d="M21,23h6v2h-6z"/><path fill="#4d4d4d" d="M12,18 L24,30 L36,18 L24,16 Z"/></svg>`,
+    'StarCaptain': `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004d99" d="M24,4C12.95,4,4,12.95,4,24s8.95,20,20,20s20-8.95,20-20S35.05,4,24,4z"/><path fill="#fff" d="M24 12 L27 19 L34 19 L29 23 L31 30 L24 26 L17 30 L19 23 L14 19 L21 19 Z"/><path fill="#ffd700" d="M14 32 H34 V36 H14z"/></svg>`,
+    'ForestSpirit': `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#225522" d="M24,4C12.95,4,4,12.95,4,24s8.95,20,20,20s20-8.95,20-20S35.05,4,24,4z"/><path d="M24,8 a12,12 0 0,0 -12,12 c0,2 1,4 3,5 l-2,8 h22 l-2-8 c2-1 3-3 3-5 a12,12 0 0,0 -12,-12z" fill="#90ee90"/><circle cx="20" cy="24" r="2" fill="#006400"/><circle cx="28" cy="24" r="2" fill="#006400"/><path d="M14,14 a10,6 0 0,1 20,0" stroke="#006400" stroke-width="2" fill="none"/></svg>`,
 };
 
 const avatarAccessories = [
@@ -170,11 +176,11 @@ const badgesData = [
 ];
 
 const friendsData = [
-    { name: 'Luna', online: true, streak: 15 },
-    { name: 'Leo', online: true, streak: 12 },
-    { name: 'Mia', online: false, streak: 8 },
-    { name: 'Zane', online: false, streak: 5 },
-    { name: 'Kai', online: true, streak: 1 },
+    { name: 'Luna', online: true, streak: 15, gokens: 324 },
+    { name: 'Leo', online: true, streak: 12, gokens: 315 },
+    { name: 'Mia', online: false, streak: 8, gokens: 298 },
+    { name: 'Zane', online: false, streak: 5, gokens: 275 },
+    { name: 'Kai', online: true, streak: 1, gokens: 262 },
 ];
 
 const collectiblesData = [
@@ -251,7 +257,7 @@ type AppState = {
     gokenPage: 'home' | 'games' | 'friends' | 'profile' | 'customize-avatar' | 'share-summary' | 'full-badges' | 'cause-details';
     gokenGamesTab: 'all-games' | 'coming-soon';
     gokenFriendsTab: 'friends-content' | 'rankings-content';
-    gokenRankingsTab: 'weekly-ranking' | 'all-time-ranking';
+    gokenRankingsTab: 'friends-ranking' | 'community-ranking';
     gokenCauseTab: 'donate' | 'history' | 'effort';
     gokenCustomizeTab: 'accessories' | 'collectibles';
     userAvatarBase: string;
@@ -263,7 +269,7 @@ let state: AppState = {
     gokenPage: 'home',
     gokenGamesTab: 'all-games',
     gokenFriendsTab: 'friends-content',
-    gokenRankingsTab: 'weekly-ranking',
+    gokenRankingsTab: 'friends-ranking',
     gokenCauseTab: 'donate',
     gokenCustomizeTab: 'accessories',
     userAvatarBase: 'Aria',
@@ -321,12 +327,9 @@ function RewardsPage() { return `
                 <div class="star-particle" style="top: 40%; left: 5%; width: 2px; height: 2px; animation-duration: 10s; animation-delay: 3.5s;"></div>
                 <div class="star-particle" style="top: 10%; left: 65%; width: 1px; height: 1px; animation-duration: 9s; animation-delay: 0s;"></div>
             </div>
-              <div class="goken-icon-wrapper">
-                   <svg class="gamepad-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                    <path d="M6 12h4m4 0h4m-6-3v6"></path>
-                </svg>
-              </div>
+                <div class="goken-icon-wrapper">
+                    <img class="gamepad-icon" src="https://img.icons8.com/?size=100&id=J2AwyRUPwjyg&format=png&color=ffffff" alt="Gamepad Icon">
+                </div>
             <div class="goken-text">
                 <h2>GOKEN ZONE</h2>
                 <p class="goken-subtext">Play • Collect • Win</p>
@@ -439,7 +442,7 @@ function gokenHomePageContent() {
 
     <div class="goken-stats">
         <div class="stat-item"><div class="stat-icon">${StatIcons.Games}</div><div><strong>23</strong><br>Games</div></div>
-        <div class="stat-item"><div class="stat-icon">${StatIcons.Badges}</div><div><strong>12</strong><br>Badges</div></div>
+        <div class="stat-item"><div class="stat-icon">${StatIcons.Badges}</div><div><strong>5</strong><br>Badges</div></div>
         <div class="stat-item"><div class="stat-icon">${StatIcons.Friends}</div><div><strong>${friendCount}</strong><br>Friends</div></div>
         <div class="stat-item"><div class="stat-icon">${StatIcons.Level}</div><div><strong>Gold</strong><br>Level</div></div>
     </div>
@@ -614,38 +617,34 @@ function gokenFullBadgesPageMarkup() {
 }
 
 function gokenFriendsPageMarkup() {
-    const user = { name: 'Aria', gokens: 89, streak: 3 };
-
-    const allPeople = [...friendsData, user];
+    const user = { name: 'Aria', gokens: 89, streak: 3, isUser: true };
+    const allPeople = [...friendsData.map(f => ({...f, isUser: false})), user];
     const topStreaker = allPeople.reduce((prev, current) => (prev.streak > current.streak) ? prev : current);
     
     // --- Leaderboard Data Setup ---
-    const allPlayersForRanking = ['Aria', 'Luna', 'Leo', 'Mia', 'Zane', 'Kai', 'Nia'];
     const avatarBgColors = {
-        Aria: '#e0f2fe', Luna: '#FBCFE8', Leo: '#A7F3D0', Mia: '#F3E8FF',
-        Zane: '#d1fae5', Kai: '#fef3c7', Nia: '#ffe4e6'
+        Aria: '#e0f2fe', Luna: '#FBCFE8', Leo: '#fed7aa', Mia: '#c4b5fd',
+        Zane: '#6ee7b7', Kai: '#fef08a', Nia: '#ffe4e6',
+        'CyberNinja': '#333', 'StarCaptain': '#004d99', 'ForestSpirit': '#225522',
     };
 
-    // Weekly Leaderboard
-    const weeklyLeaderboardData = [
-        { name: 'Luna', gokens: 324 }, { name: 'Leo', gokens: 315 }, { name: 'Mia', gokens: 298 },
-        { name: 'Zane', gokens: 275 }, { name: 'Kai', gokens: 262 }, { name: 'Nia', gokens: 251 },
-        { name: 'Aria', gokens: 89, isUser: true },
-    ].sort((a,b) => b.gokens - a.gokens).map((p, i) => ({...p, rank: i+1}));
+    // Friends Leaderboard
+    const friendsLeaderboardData = allPeople.sort((a,b) => b.gokens - a.gokens).map((p, i) => ({...p, rank: i+1}));
+    const friendsTop3 = friendsLeaderboardData.slice(0, 3);
+    const friendsRest = friendsLeaderboardData.slice(3);
+    const podiumOrderFriends = [ friendsTop3.find(p => p.rank === 2), friendsTop3.find(p => p.rank === 1), friendsTop3.find(p => p.rank === 3) ].filter(Boolean);
 
-    const weeklyTop3 = weeklyLeaderboardData.slice(0, 3);
-    const weeklyRest = weeklyLeaderboardData.slice(3);
-    const podiumOrderWeekly = [ weeklyTop3.find(p => p.rank === 2), weeklyTop3.find(p => p.rank === 1), weeklyTop3.find(p => p.rank === 3) ].filter(Boolean);
+    // Community Leaderboard
+    const communityTopPlayers = [
+        { name: 'CyberNinja', gokens: 98500, isUser: false },
+        { name: 'StarCaptain', gokens: 95200, isUser: false },
+        { name: 'ForestSpirit', gokens: 91800, isUser: false },
+        { name: 'Player4', gokens: 88000, isUser: false, avatar: 'Kai'},
+        { name: 'Player5', gokens: 87500, isUser: false, avatar: 'Leo'},
+    ].map((p, i) => ({...p, rank: i+1}));
 
-    // All-Time Leaderboard (randomized)
-    const getRandomScore = () => Math.floor(Math.random() * (350 - 12 + 1)) + 12;
-    const allTimeLeaderboardData = allPlayersForRanking.map(name => ({
-        name: name, gokens: getRandomScore(), isUser: name === 'Aria',
-    })).sort((a, b) => b.gokens - a.gokens).map((player, index) => ({ ...player, rank: index + 1 }));
-
-    const allTimeTop3 = allTimeLeaderboardData.slice(0, 3);
-    const allTimeRest = allTimeLeaderboardData.slice(3);
-    const podiumOrderAllTime = [ allTimeTop3.find(p => p.rank === 2), allTimeTop3.find(p => p.rank === 1), allTimeTop3.find(p => p.rank === 3)].filter(Boolean);
+    const communityPodium = [ communityTopPlayers.find(p => p.rank === 2), communityTopPlayers.find(p => p.rank === 1), communityTopPlayers.find(p => p.rank === 3) ].filter(Boolean);
+    const communityRest = communityTopPlayers.slice(3);
 
 
     return `
@@ -703,12 +702,12 @@ function gokenFriendsPageMarkup() {
 
         <div class="games-tab-content ${state.gokenFriendsTab === 'rankings-content' ? 'active' : ''}" id="rankings-content">
              <div class="rankings-sub-tabs">
-                <button class="rankings-sub-tab-btn ${state.gokenRankingsTab === 'weekly-ranking' ? 'active' : ''}" data-action="switch-tab" data-tab-group="gokenRankings" data-tab="weekly-ranking">Weekly</button>
-                <button class="rankings-sub-tab-btn ${state.gokenRankingsTab === 'all-time-ranking' ? 'active' : ''}" data-action="switch-tab" data-tab-group="gokenRankings" data-tab="all-time-ranking">All time</button>
+                <button class="rankings-sub-tab-btn ${state.gokenRankingsTab === 'friends-ranking' ? 'active' : ''}" data-action="switch-tab" data-tab-group="gokenRankings" data-tab="friends-ranking">Friends</button>
+                <button class="rankings-sub-tab-btn ${state.gokenRankingsTab === 'community-ranking' ? 'active' : ''}" data-action="switch-tab" data-tab-group="gokenRankings" data-tab="community-ranking">Community</button>
             </div>
-            <div class="leaderboard-content ${state.gokenRankingsTab === 'weekly-ranking' ? 'active' : ''}" id="weekly-ranking">
+            <div class="leaderboard-content ${state.gokenRankingsTab === 'friends-ranking' ? 'active' : ''}" id="friends-ranking">
                  <div class="leaderboard-podium-cute">
-                    ${podiumOrderWeekly.map(item => `
+                    ${podiumOrderFriends.map(item => `
                         <div class="podium-item podium-${item.rank}">
                             <div class="podium-avatar" style="--bg-color: ${avatarBgColors[item.name] || '#e5e7eb'};">${avatarSVGs[item.name]}</div>
                             <div class="podium-info">
@@ -721,7 +720,7 @@ function gokenFriendsPageMarkup() {
                 </div>
 
                 <div class="leaderboard-list">
-                   ${weeklyRest.map(item => `
+                   ${friendsRest.map(item => `
                         <div class="leaderboard-item ${item.isUser ? 'is-user' : ''}">
                             <div class="friend-info">
                                 <span class="friend-rank">${item.rank}</span>
@@ -735,32 +734,42 @@ function gokenFriendsPageMarkup() {
                    `).join('')}
                 </div>
             </div>
-            <div class="leaderboard-content ${state.gokenRankingsTab === 'all-time-ranking' ? 'active' : ''}" id="all-time-ranking">
+            <div class="leaderboard-content ${state.gokenRankingsTab === 'community-ranking' ? 'active' : ''}" id="community-ranking">
                 <div class="leaderboard-podium-cute">
-                    ${podiumOrderAllTime.map(item => `
+                    ${communityPodium.map(item => `
                         <div class="podium-item podium-${item.rank}">
-                            <div class="podium-avatar" style="--bg-color: ${avatarBgColors[item.name] || '#e5e7eb'};">${avatarSVGs[item.name]}</div>
+                            <div class="podium-avatar" style="--bg-color: ${avatarBgColors[item.name] || '#e5e7eb'};">${communityAvatarSVGs[item.name]}</div>
                             <div class="podium-info">
                                 <span class="podium-name">${item.name}</span>
-                                <span class="podium-score">${item.gokens} Gokens</span>
+                                <span class="podium-score">${item.gokens.toLocaleString()} Gokens</span>
                             </div>
                             <div class="podium-stand">${item.rank}</div>
                         </div>
                     `).join('')}
                 </div>
                 <div class="leaderboard-list">
-                   ${allTimeRest.map(item => `
-                        <div class="leaderboard-item ${item.isUser ? 'is-user' : ''}">
+                   ${communityRest.map(item => `
+                        <div class="leaderboard-item">
                             <div class="friend-info">
                                 <span class="friend-rank">${item.rank}</span>
-                                <div class="friend-avatar-container">${avatarSVGs[item.name]}</div>
+                                <div class="friend-avatar-container">${avatarSVGs[item.avatar]}</div>
                                 <div>
-                                    <span class="friend-name">${item.name} ${item.isUser ? '(You)' : ''}</span>
+                                    <span class="friend-name">${item.name}</span>
                                 </div>
                             </div>
                             <span class="leaderboard-gokens">${item.gokens.toLocaleString()}</span>
                         </div>
                    `).join('')}
+                    <div class="leaderboard-item is-user" style="margin-top: 8px;">
+                        <div class="friend-info">
+                            <span class="friend-rank">#7,346</span>
+                            <div class="friend-avatar-container" style="visibility: hidden;"></div>
+                            <div>
+                                <span class="friend-name" style="font-weight: 600;">Aria (You)</span>
+                            </div>
+                        </div>
+                        <span class="leaderboard-gokens" style="color: var(--goken-primary);">3578</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -837,7 +846,7 @@ function gokenProfilePageMarkup() {
             </div>
             <div class="profile-progress-grid">
                 <div class="progress-stat-card"><div class="progress-icon-wrapper">${StatIcons.Streak}</div><div><h4>15 Days</h4><p>Highest Streak</p></div></div>
-                <div class="progress-stat-card"><div class="progress-icon-wrapper">${StatIcons.Rank}</div><div><h4>#4</h4><p>Current Rank</p></div></div>
+                <div class="progress-stat-card"><div class="progress-icon-wrapper">${StatIcons.Rank}</div><div><h4>#7,346</h4><p>Current Rank</p></div></div>
                 <div class="progress-stat-card"><div class="progress-icon-wrapper">${StatIcons.Played}</div><div><h4>23</h4><p>Games Played</p></div></div>
             </div>
              <div class="goken-card share-journey-card-section blue-theme" data-action="navigate" data-page-group="goken" data-page="share-summary" style="margin-top: 16px;">
@@ -891,7 +900,9 @@ function gokenSharePageMarkup() {
                 Back to Profile
             </button>
             <div class="trophy-container">
-                <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L9 5h6l-3-3z"/><path d="M12 5v4"/><path d="M6 9H4a2 2 0 00-2 2v2a6 6 0 006 6h8a6 6 0 006-6v-2a2 2 0 00-2-2h-2"/><path d="M6 15h12"/></svg>
+                <img src="https://img.icons8.com/?size=100&id=37692&format=png&" alt="Trophy" class="trophy-icon">
+                
+                <!-- Sparkles -->
                 <div class="sparkle s1"></div>
                 <div class="sparkle s2"></div>
                 <div class="sparkle s3"></div>
@@ -906,7 +917,7 @@ function gokenSharePageMarkup() {
                     <div class="achievement-label">Highest Streak</div>
                 </div>
                 <div class="achievement-item">
-                    <div class="achievement-value">#4</div>
+                    <div class="achievement-value">#7,346</div>
                     <div class="achievement-label">Current Rank</div>
                 </div>
                 <div class="achievement-item">
@@ -1097,24 +1108,36 @@ function gokenCustomizeAvatarPageMarkup() {
                 
                 <h4 class="collection-header">My Character Collection</h4>
                 <div class="collectibles-grid">
-                    ${collectiblesData.map(col => `
-                        <button class="collectible-item ${col.unlocked ? '' : 'locked'} ${state.userAvatarBase === col.id ? 'selected' : ''}"
-                                data-action="select-base"
-                                data-base-id="${col.id}"
-                                ${!col.unlocked ? 'disabled' : ''}>
-                            <div class="collectible-icon">
-                                ${avatarSVGs[col.id]}
-                            </div>
-                            <span>${col.name}</span>
-                             ${!col.unlocked ? `<div class="collectible-lock-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            </div>` : ''}
-                        </button>
-                    `).join('')}
+                    ${collectiblesData.map((col, index) => {
+                        const isFirst = index === 0;
+                        const unlocked = isFirst;
+
+                        return `
+                            <button class="collectible-item ${unlocked ? '' : 'locked'} ${state.userAvatarBase === col.id ? 'selected' : ''}"
+                                    data-action="select-base"
+                                    data-base-id="${col.id}"
+                                    ${!unlocked ? 'disabled' : ''}>
+                                <div class="collectible-icon">
+                                    ${avatarSVGs[col.id]}
+                                </div>
+                                ${!unlocked ? `
+                                    <div class="collectible-lock-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </div>` 
+                                : ''}
+                            </button>
+                        `;
+                    }).join('')}
                 </div>
-            </div>
-        </div>
-        
         <button class="save-avatar-btn" data-action="save-avatar">
             Save Appearance
         </button>
@@ -1127,11 +1150,11 @@ const gokenNavMarkup = () => {
 <nav class="goken-bottom-nav">
     <a href="#" class="goken-nav-item ${state.gokenPage === 'home' ? 'active' : ''}" data-action="navigate" data-page-group="goken" data-page="home">
         ${gokenNavIcons.Home}
-        <span>Goken</span>
+        <span>Home</span>
     </a>
     <a href="#" class="goken-nav-item ${state.gokenPage === 'games' ? 'active' : ''}" data-action="navigate" data-page-group="goken" data-page="games">
         ${gokenNavIcons.Game}
-        <span>Game</span>
+        <span>Games</span>
     </a>
     <a href="#" class="goken-nav-item ${state.gokenPage === 'friends' ? 'active' : ''}" data-action="navigate" data-page-group="goken" data-page="friends">
         ${gokenNavIcons.Friends}
@@ -1142,11 +1165,14 @@ const gokenNavMarkup = () => {
         <span>Profile</span>
     </a>
 </nav>
-`;}
+`;};
 
-function gokenZonePageMarkup() {
-    const showHeader = !['share-summary', 'cause-details', 'full-badges', 'customize-avatar'].includes(state.gokenPage);
+
+// --- APP LOGIC AND RENDERING ---
+
+function GokenZone() {
     let pageContent = '';
+    const standalonePages = ['full-badges', 'share-summary', 'cause-details', 'customize-avatar'];
 
     switch (state.gokenPage) {
         case 'home': pageContent = gokenHomePageContent(); break;
@@ -1157,94 +1183,135 @@ function gokenZonePageMarkup() {
         case 'share-summary': pageContent = gokenSharePageMarkup(); break;
         case 'cause-details': pageContent = gokenCausePageMarkup(); break;
         case 'customize-avatar': pageContent = gokenCustomizeAvatarPageMarkup(); break;
+        default: pageContent = gokenHomePageContent();
     }
+    
+    const addGenericHeader = !['home', ...standalonePages].includes(state.gokenPage);
+    const headerTitle = state.gokenPage.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
     return `
-<div class="page-container goken-zone-active" id="goken-zone-page">
-    <div class="goken-zone-page-content">
-        <header class="goken-header" id="goken-header-main" style="display: ${showHeader ? 'flex' : 'none'}">
-             <button class="back-btn" id="back-to-rewards-btn" data-action="navigate" data-page-group="root" data-page="rewards">
+    <div class="page-container goken-zone" id="goken-zone-page">
+        ${addGenericHeader ? `
+        <header class="goken-header">
+            <button class="goken-back-btn" data-action="navigate" data-page-group="goken" data-page="home">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                <span>Back</span>
             </button>
-            <div class="goken-balance">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FBBF24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                <span>89</span>
+            <h2 class="goken-header-title">${headerTitle}</h2>
+            <div class="goken-header-balance">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                89
             </div>
         </header>
-
-        <main id="goken-page-main-content">
+        ` : ''}
+        <div class="goken-page-content-wrapper">
             ${pageContent}
-        </main>
+        </div>
+        ${gokenNavMarkup()}
     </div>
-    ${gokenNavMarkup()}
-</div>
-`;}
+    `;
+}
 
-// --- MAIN RENDER AND EVENT HANDLING ---
+function handleNavigation(element: HTMLElement) {
+    const pageGroup = element.dataset.pageGroup as 'root' | 'goken';
+    const page = element.dataset.page;
+
+    if (pageGroup === 'root' && page === 'gokenZone') {
+        setState({ currentPage: 'gokenZone', gokenPage: 'home' });
+    } else if (pageGroup === 'goken' && page) {
+        setState({ gokenPage: page as any });
+    }
+}
+
+function handleTabSwitch(element: HTMLElement) {
+    const tabGroup = element.dataset.tabGroup;
+    const tab = element.dataset.tab;
+    const newState: Partial<AppState> = {};
+
+    if (tabGroup && tab) {
+        switch(tabGroup) {
+            case 'gokenGames': newState.gokenGamesTab = tab as any; break;
+            case 'gokenFriends': newState.gokenFriendsTab = tab as any; break;
+            case 'gokenRankings': newState.gokenRankingsTab = tab as any; break;
+            case 'gokenCause': newState.gokenCauseTab = tab as any; break;
+            case 'gokenCustomize': newState.gokenCustomizeTab = tab as any; break;
+        }
+        setState(newState);
+    }
+}
+
+function handleToggleAccessory(element: HTMLElement) {
+    const accessoryId = element.dataset.accessoryId;
+    if (!accessoryId) return;
+
+    const accessories = state.userAvatarAccessories;
+    if (accessories.includes(accessoryId)) {
+        setState({ userAvatarAccessories: accessories.filter(id => id !== accessoryId) });
+    } else {
+        setState({ userAvatarAccessories: [...accessories, accessoryId] });
+    }
+}
+
+function handleSelectBase(element: HTMLElement) {
+    const baseId = element.dataset.baseId;
+    if (baseId) {
+        setState({ userAvatarBase: baseId });
+    }
+}
+
+function handleSaveAvatar() {
+    alert('Avatar saved!');
+    setState({ gokenPage: 'profile' });
+}
+
+
+function addEventListeners() {
+    document.body.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const actionElement = target.closest('[data-action]') as HTMLElement | null;
+
+        if (actionElement) {
+            const action = actionElement.dataset.action;
+            switch (action) {
+                case 'navigate':
+                    handleNavigation(actionElement);
+                    break;
+                case 'switch-tab':
+                    handleTabSwitch(actionElement);
+                    break;
+                case 'toggle-accessory':
+                    handleToggleAccessory(actionElement);
+                    break;
+                case 'select-base':
+                    handleSelectBase(actionElement);
+                    break;
+                case 'save-avatar':
+                    handleSaveAvatar();
+                    break;
+                case 'pull-gacha':
+                    alert(`Pulled a gacha for ${actionElement.dataset.cost} Goken(s)!`);
+                    break;
+            }
+        }
+    });
+}
 
 function renderApp() {
     if (!root) return;
-    if (state.currentPage === 'rewards') {
-        root.innerHTML = RewardsPage();
-    } else {
-        root.innerHTML = gokenZonePageMarkup();
+
+    let markup = '';
+    switch (state.currentPage) {
+        case 'rewards':
+            markup = RewardsPage();
+            break;
+        case 'gokenZone':
+            markup = GokenZone();
+            break;
     }
+    
+    root.innerHTML = markup;
+    window.scrollTo(0, 0);
 }
 
-function handleEvent(e: Event) {
-    const target = e.target as HTMLElement;
-    const actionTarget = target.closest('[data-action]');
-
-    if (!actionTarget) return;
-    e.preventDefault();
-
-    const action = actionTarget.getAttribute('data-action');
-    const pageGroup = actionTarget.getAttribute('data-page-group');
-    const page = actionTarget.getAttribute('data-page');
-    const tabGroup = actionTarget.getAttribute('data-tab-group');
-    const tab = actionTarget.getAttribute('data-tab');
-
-    if (action === 'navigate') {
-        if (pageGroup === 'root' && page) {
-            setState({ currentPage: page as 'rewards' | 'gokenZone', gokenPage: 'home' });
-        } else if (pageGroup === 'goken' && page) {
-            setState({ gokenPage: page as AppState['gokenPage'] });
-        }
-    } else if (action === 'switch-tab') {
-        if (tabGroup === 'gokenGames' && tab) setState({ gokenGamesTab: tab as AppState['gokenGamesTab'] });
-        if (tabGroup === 'gokenFriends' && tab) setState({ gokenFriendsTab: tab as AppState['gokenFriendsTab'] });
-        if (tabGroup === 'gokenRankings' && tab) setState({ gokenRankingsTab: tab as AppState['gokenRankingsTab'] });
-        if (tabGroup === 'gokenCause' && tab) setState({ gokenCauseTab: tab as AppState['gokenCauseTab'] });
-        if (tabGroup === 'gokenCustomize' && tab) setState({ gokenCustomizeTab: tab as AppState['gokenCustomizeTab'] });
-    } else if (action === 'toggle-accessory') {
-        const id = actionTarget.getAttribute('data-accessory-id');
-        if (!id) return;
-        const currentAccessories = [...state.userAvatarAccessories];
-        const index = currentAccessories.indexOf(id);
-        if (index > -1) {
-            currentAccessories.splice(index, 1);
-        } else {
-            currentAccessories.push(id);
-        }
-        setState({ userAvatarAccessories: currentAccessories });
-    } else if (action === 'select-base') {
-        const id = actionTarget.getAttribute('data-base-id');
-        if (id) {
-            setState({ userAvatarBase: id });
-        }
-    } else if (action === 'pull-gacha') {
-        const cost = parseInt(actionTarget.getAttribute('data-cost') || '0', 10);
-        alert(`You performed a ${cost} Goken Pull! Amazing prizes await! (This is a mock-up)`);
-    } else if (action === 'save-avatar') {
-        // In a real app, this would save to a backend. Here we just navigate.
-        alert('Avatar saved!');
-        setState({ gokenPage: 'profile' });
-    }
-}
-
-// Initial Setup
-if (root) {
-    root.addEventListener('click', handleEvent);
-    renderApp();
-}
+// --- INITIALIZATION ---
+renderApp();
+addEventListeners();

@@ -162,9 +162,8 @@ button:active, a:active {
 .goken-icon-wrapper, .goken-text, .goken-points { z-index: 1; }
 .goken-icon-wrapper { background-color: rgba(255,255,255,0.1); width: 56px; height: 56px; border-radius: 14px; margin-right: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(255, 255, 255, 0.2); }
 .gamepad-icon { stroke: var(--white); width: 28px; height: 28px;}
-.goken-text { flex-grow: 1; }
 .goken-text h2 { font-size: 18px; font-weight: 700; color: var(--white); }
-.goken-text .goken-subtext { font-size: 14px; color: #5eead4; opacity: 0.9; }
+.goken-text .goken-subtext { font-size: 14px; color: #cfe1ff; opacity: 0.9; }
 .goken-points { text-align: right; flex-shrink: 0; }
 .goken-points-value { display: flex; align-items: center; justify-content: flex-end; gap: 4px; font-size: 20px; font-weight: 700; color: var(--goken-gold); }
 .goken-points-label { font-size: 12px; color: #cecfcf; }
@@ -575,7 +574,6 @@ button:active, a:active {
     gap: 8px;
     padding: 24px 12px 0;
     margin-bottom: 24px;
-    min-height: 200px;
     background: linear-gradient(180deg, #f3e8ff, #e0f2fe);
     border-radius: 20px;
 }
@@ -597,7 +595,7 @@ button:active, a:active {
 }
 .podium-avatar svg { width: 100%; height: 100%; border-radius: 50%; }
 .podium-info { text-align: center; margin-bottom: 8px; }
-.podium-name { font-weight: 600; font-size: 14px; color: var(--dark-text); }
+.podium-name { font-weight: 600; font-size: 14px; color: var(--dark-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .podium-score { font-size: 12px; color: var(--light-text); }
 .podium-stand {
     width: 100%;
@@ -622,25 +620,105 @@ button:active, a:active {
 .leaderboard-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #f9fafb; border-radius: 8px; }
 .leaderboard-item .friend-avatar-container { width: 40px; height: 40px; }
 .leaderboard-item .friend-info { flex-grow: 1; display: flex; align-items: center; gap: 12px; }
-.friend-rank { font-size: 14px; font-weight: 600; color: var(--light-text); width: 20px; text-align: center; }
+.friend-rank {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-text);
+    text-align: right;
+    padding-right: 8px;
+    flex-shrink: 0;
+}
 .leaderboard-gokens { font-weight: 600; color: var(--goken-primary); font-size: 14px; }
 .leaderboard-item.is-user { background-color: var(--goken-card-bg-light-purple); border: 1px solid var(--goken-card-border-purple); }
 .leaderboard-item.is-user .friend-name, .leaderboard-item.is-user .leaderboard-gokens { color: var(--goken-purple-icon); }
 
+.user-rank-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* increase this if still too close */
+    min-width: 0; /* ensures flex shrink works correctly */
+}
+
+.friend-rank {
+    flex-shrink: 0; /* prevents rank from shrinking */
+}
+
+.friend-avatar-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+
 /* --- SUBPAGES (SHARE, CAUSE, CUSTOMIZE) --- */
-.share-summary-page { display: flex; flex-direction: column; align-items: center; padding: 24px 16px; background: linear-gradient(180deg, #fef3c7, #fff); }
-.trophy-container { position: relative; margin-bottom: 16px; }
-.trophy-icon { width: 80px; height: 80px; color: #fbbf24; }
-.victory-title { font-size: 1.75rem; font-weight: 700; color: #ca8a04; margin-bottom: 4px; }
-.victory-subtitle { font-size: 1rem; color: #a16207; margin-bottom: 24px; }
+.share-summary-page {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 24px 16px;
+    background: linear-gradient(180deg, #EFF6FF, #ffffff);
+}
+@keyframes trophy-pop-in {
+    0% { transform: scale(0) rotate(-15deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.trophy-container {
+    position: relative;
+    margin-bottom: 16px;
+    display: inline-block;
+    animation: trophy-pop-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.trophy-icon {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.7)); /* golden glow */
+}
+/* Sparkle Base Style */
+.sparkle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, rgba(255, 255, 200, 1) 0%, rgba(255, 223, 88, 0.9) 40%, rgba(255, 215, 0, 0) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 223, 88, 0.6);
+    opacity: 0;
+    animation: sparkle 1.5s infinite ease-in-out, shinePulse 2s infinite ease-in-out;
+}
+/* Sparkle Positions */
+.s1 { top: 10%; left: 15%; animation-delay: 0s; }
+.s2 { top: 20%; right: 20%; animation-delay: 0.3s; }
+.s3 { bottom: 15%; left: 25%; animation-delay: 0.6s; }
+.s4 { bottom: 10%; right: 15%; animation-delay: 0.9s; }
+/* Sparkle Twinkle */
+@keyframes sparkle {
+    0%, 100% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+    50% { transform: scale(1.8) rotate(45deg); opacity: 1; }
+}
+/* Gentle glow pulsing for shine effect */
+@keyframes shinePulse {
+    0%, 100% { box-shadow: 0 0 6px rgba(255, 223, 88, 0.8), 0 0 12px rgba(255, 215, 0, 0.5); }
+    50% { box-shadow: 0 0 12px rgba(255, 255, 180, 1), 0 0 20px rgba(255, 223, 88, 0.9); }
+}
+.victory-title { font-size: 1.75rem; font-weight: 700; color: #1E3A8A; margin-bottom: 4px; }
+.victory-subtitle { font-size: 1rem; color: #1D4ED8; margin-bottom: 24px; }
 .achievements-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; margin-bottom: 24px; }
-.achievement-item { background-color: rgba(255, 255, 255, 0.7); border: 1px solid #fde68a; border-radius: 12px; padding: 16px; text-align: center; }
-.achievement-value { font-size: 1.5rem; font-weight: 700; color: #854d0e; }
+.achievement-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--goken-card-border-blue);
+    border-radius: 12px; padding: 16px; text-align: center;
+}
+.achievement-value { font-size: 1.5rem; font-weight: 700; color: #1E40AF; }
 .achievement-value .achievement-unit { font-size: 1rem; }
-.achievement-label { font-size: 0.8rem; color: #a16207; }
-.rare-badges-title { font-size: 1.1rem; font-weight: 600; color: #854d0e; margin-bottom: 16px; }
+.achievement-label { font-size: 0.8rem; color: var(--goken-blue-text); }
+.rare-badges-title { font-size: 1.1rem; font-weight: 600; color: #1E3A8A; margin-bottom: 16px; }
 .rare-badges-list { display: flex; gap: 16px; justify-content: center; margin-bottom: 32px; }
-.share-now-btn { background: linear-gradient(45deg, #f97316, #fbbf24); color: white; border: none; padding: 14px 28px; border-radius: 28px; font-size: 1rem; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4); }
+.share-now-btn {
+    background: linear-gradient(45deg, var(--goken-primary), #60A5FA);
+    color: white; border: none; padding: 14px 28px; border-radius: 28px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
 
 .cause-details-page { padding: 16px; }
 .cause-main-title { font-size: 1.5rem; font-weight: 700; color: var(--goken-pink-text); text-align: center; }
