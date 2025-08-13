@@ -4,7 +4,7 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // THIS IS THE IMPORTANT LINE TO ADD
+      // THIS IS THE CRITICAL LINE TO ADD
       base: '/Gokenzone/', 
       
       define: {
