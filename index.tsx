@@ -119,19 +119,19 @@ const TenPullMysteryBoxWithRibbonIcon = () => `
 // --- DATA ---
 const allGames = [
     {
-        name: 'Stamp Rally',
+        name: 'Stamp That',
         description: 'Complete daily tasks to collect unique stamps!',
         imageUrl: 'https://media.discordapp.net/attachments/1077977791594762375/1405098124313104394/3.png?ex=689d971a&is=689c459a&hm=7f09b48810ac560a6d0df0549016f05a7ac99e2fd3c24b909f3b71774ce4e90e&=&format=webp&quality=lossless&width=573&height=810',
         timer: '149d 10h 5m'
     },
     {
-        name: 'Gift Reveal',
+        name: 'Happy Tappy',
         description: 'Choose a mystery box and reveal your amazing prize.',
         imageUrl: 'https://media.discordapp.net/attachments/1077977791594762375/1405098122970927145/1.png?ex=689d9719&is=689c4599&hm=57ce9b0b01f65d1eff70b22a1b8efbbf2c84bcdeb0c3b539a701886a51adf275&=&format=webp&quality=lossless&width=573&height=810',
         timer: '121d 8h 15m'
     },
     {
-        name: 'Spin To Win',
+        name: 'Wheel To Win',
         description: 'Spin the wheel for a chance at the daily jackpot.',
         imageUrl: 'https://media.discordapp.net/attachments/1077977791594762375/1405098123692609656/2.png?ex=689d971a&is=689c459a&hm=3f1f1b05c352a7f1516cbabc83a6c941feb6c76545221f2139a1e12427e3cb41&=&format=webp&quality=lossless&width=573&height=810',
         timer: '105d 4h 30m'
