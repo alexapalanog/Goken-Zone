@@ -1186,20 +1186,25 @@ function GokenZone() {
         default: pageContent = gokenHomePageContent();
     }
     
-    const addGenericHeader = !['home', ...standalonePages].includes(state.gokenPage);
-    const headerTitle = state.gokenPage.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const showHeader = !standalonePages.includes(state.gokenPage);
+    
+    const isHomePage = state.gokenPage === 'home';
+    const backButtonAction = isHomePage
+        ? `data-action="navigate" data-page-group="root" data-page="rewards"`
+        : `data-action="navigate" data-page-group="goken" data-page="home"`;
+
 
     return `
     <div class="page-container goken-zone" id="goken-zone-page">
-        ${addGenericHeader ? `
-        <header class="goken-header">
-            <button class="goken-back-btn" data-action="navigate" data-page-group="goken" data-page="home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        ${showHeader ? `
+        <header class="goken-top-header">
+            <button class="goken-back-button" ${backButtonAction}>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <span>Back</span>
             </button>
-            <h2 class="goken-header-title">${headerTitle}</h2>
-            <div class="goken-header-balance">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                89
+            <div class="goken-points-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                <span>89</span>
             </div>
         </header>
         ` : ''}
@@ -1215,8 +1220,12 @@ function handleNavigation(element: HTMLElement) {
     const pageGroup = element.dataset.pageGroup as 'root' | 'goken';
     const page = element.dataset.page;
 
-    if (pageGroup === 'root' && page === 'gokenZone') {
-        setState({ currentPage: 'gokenZone', gokenPage: 'home' });
+    if (pageGroup === 'root') {
+        if (page === 'gokenZone') {
+            setState({ currentPage: 'gokenZone', gokenPage: 'home' });
+        } else if (page === 'rewards') {
+            setState({ currentPage: 'rewards' });
+        }
     } else if (pageGroup === 'goken' && page) {
         setState({ gokenPage: page as any });
     }

@@ -212,26 +212,52 @@ button:active, a:active {
 /* ==========================================================================
    GOKEN ZONE
    ========================================================================== */
-.goken-zone-page-content {
-    padding: 0 16px 16px 16px; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 16px;
-    background-color: #f9fafb; /* Light gray background for the entire zone */
+.goken-zone .goken-page-content-wrapper {
+    padding: 0 16px;
 }
+
 .goken-home-layout, .profile-page-container, .games-page-container, .friends-page-container, .goken-subpage {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-.goken-header {
+
+.goken-top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 16px 0; /* Vertical padding */
+    padding: 16px;
+    background-color: var(--background-color);
 }
-.goken-header .back-btn, .subpage-back-btn {
+.goken-back-button, .goken-points-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark-text);
+}
+.goken-back-button svg {
+    stroke: currentColor;
+}
+.goken-points-button svg {
+    fill: var(--goken-gold);
+    width: 16px;
+    height: 16px;
+}
+.goken-points-button span {
+    color: var(--dark-text);
+}
+
+
+.subpage-back-btn {
     background: var(--white);
     border: 1px solid #D1D5DB;
     color: #374151;
@@ -245,19 +271,8 @@ button:active, a:active {
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
-}
-.subpage-back-btn { align-self: flex-start; margin-bottom: 0; } /* Adjusted from 16px */
-.goken-balance {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 700;
-    font-size: 16px;
-    background: var(--white);
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: 1px solid #D1D5DB;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    align-self: flex-start; 
+    margin-bottom: 0;
 }
 
 .goken-main-banner {
